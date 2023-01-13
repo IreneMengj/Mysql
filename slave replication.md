@@ -1,3 +1,9 @@
+## Mysql master-slave replication
+<img src="https://devopscube.com/wp-content/uploads/2019/09/unnamed-2048x1024.png.webp">
+1.master records data changes to binary log
+2.slave copies binary log to its own relay log
+3.slave replays events in relay log and applies changes in its own database
+
 ## How to realize master-slave replication using docker on mac
 I have been stuck for three days. Finally it works out&#x1F600;<br>
 https://blog.csdn.net/qq_55022037/article/details/116140174<br>
