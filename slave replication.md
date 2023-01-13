@@ -9,5 +9,6 @@ docker network create --subnet=172.172.0.0/16 docker-static
 ~~~
 
 Then I started to perform read-write separation.Here I met a proble saying:Communications link failure. I searched through google and found one article might be useful:https://blog.csdn.net/izibeike/article/details/79366607
+I changed mysql configuration as this artical said. It didn't work. So I think the reason why my read-write separation didn't work is probably caused by the conflict of mysql version. local version:8+ but docker version 5.7
 
 
