@@ -25,8 +25,34 @@ The reference type member variable of the serialized object must also be seriali
 If you want a variable not to be serialized, use the transient modifier.<br>
 Serialize the singleton class, requiring overriding the readResolve() method.<br>
 
-<b>4. String, StringBuffer, StringBuilder</b>
+<b>4. String, StringBuffer, StringBuilder</b><br>
 A String consists of a char[] array, is final, is immutable, can be understood as a constant, and is thread-safe; Each time a change is made to a String, a new String is generated, and the pointer is pointed to the new reference object.<br>
 StringBuffer thread safe; The StringBuiler thread is not secure.<br>
 String for small amounts of character data; StringBuilder for single-threaded manipulation of large amounts of data; A StringBuffer is used for multithreaded manipulation of large amounts of data.<br>
+
+<b>5. Overloading and rewriting</b><br>
+Overloading occurs in the same class. The method name is the same, the type, number, and order of arguments are different, and the return value and modifiers of the method can be different.<br>
+Overrides occur in parent and child classes where the method name and parameter are the same, the return value range is less than or equal to the parent class, the exception range is less than or equal to the parent class, and the access modifier range is greater than or equal to the parent class. If the superclass method access modifier is private or final, the subclass cannot override the method.<br>
+
+<b>6. final</b><br>
+Modifies primitive type variables so that they cannot be modified once they are out of initialization.<br>
+Modifies a reference type variable and cannot point to another reference.<br>
+Modifies a class or method that cannot be inherited or overridden.<br>
+
+<b>7. Reflection</b><br>
+Get the complete information of the class dynamically at run time<br>
+Increase the flexibility of the program<br>
+The JDK dynamic proxy uses reflection<br>
+
+<b>8. JDK dynamic proxy</b><br>
+Use procedure<br>
+Create interfaces and implementation classes<br>
+Implement Proxy handler: implement InvokationHandler and invoke (Proxy proxy, Method method, Object[] args) method<br>
+Obtain the Proxy classes through proxy.newproxyInstance (ClassLoaderloader, Class[] interfaces, InvocationHandler h)<br>
+Invoke a method through a proxy class.<br>
+
+<b>9. Java IO</b><br>
+Normal IO, stream oriented, synchronous blocking thread.<br>
+NIO, buffer oriented, synchronous non-blocking.<br>
+
 
