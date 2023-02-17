@@ -55,4 +55,33 @@ Invoke a method through a proxy class.<br>
 Normal IO, stream oriented, synchronous blocking thread.<br>
 NIO, buffer oriented, synchronous non-blocking.<br>
 
-
+<b>2.Java collection framework</b><br>
+<b>1. List (linear structure)</b><br>
+ArrayList Object[] array implementation, the default size is 10, support random access, continuous memory space, end insertion time complexity o(1), insertion time complexity i position o(n - i). Array. copyOf (underlying System.ArrayCopy) is copied to a new array. The pointer points to the new array.
+A Vector is thread-safe, like an ArrayList. By default, it grows to twice the size of an ArrayList.<br>
+LinkedList is based on Linkedlist implementation. 1.7 is a bidirectional linked list and 1.6 is a bidirectional circular linked list.<br>
+<b>2. Map (K, V pairs)</b><br>
+<b>HashMap</b><br>
+The underlying data structure, JDK 1.8 is array + linked list + red-black tree, JDK 1.7 no red-black tree. When the length of the list is greater than 8, it is converted into a red-black tree to optimize query efficiency.<br>
+The initial capacity is 16. Use tableSizeFor to ensure that the capacity is raised to the power of 2. Addressing mode, high XOR, (n-1)&h modulo, optimize speed.<br>
+Expansion mechanism: When the number of elements is greater than the capacity x load factor 0.75, the capacity is doubled, an array is created, and then transferred to the new array.<br>
+Based on Map implementation.<br>
+The thread is not safe.<br>
+HashMap (1.7) Multithreaded loop linked list problem<br>
+In a multithreaded environment, the HashMap in 1.7 forms a circular linked list during capacity expansion.<br>
+How to form A circular list: Suppose you have a HashMap of capacity 2, stored as A -> B list at array index 1. A thread has put operations on the map. Expansion conditions are triggered and the map needs to be expanded. Procedure At this time, another thread also put operation, also need to expand the expansion operation, and completed the expansion operation, because copy to the new array is the head insert, so the 1 position becomes B -> A. At this time, the first thread continues to perform the expansion operation, first copying A, then copying B, and then judging whether B.next is empty, because the second thread does the expansion operation, causing B.next = A, so before placing A in front of B, A.next = B, resulting in the circular linked list.<br>
+<b>HashTable</b><br>
+Thread-safe, methods are almost entirely Synchronized.<br>
+The initial capacity is 11, and the expansion capacity is 2n + 1.<br>
+Inherits the Dictionary class.<br>
+<b>ConcurrentHashMap</b><br>
+Thread-safe HashMap.<br>
+1.7 Locking in the form of segmental locking; 1.8 Synchronized and CAS are used to achieve synchronization. If the Node in the array is empty, the value is set by CAS; if not, it is added to the first node in the linked list. Getting whether the first element is empty guarantees visibility using the getObjectVolatile provided by the Unsafe class.<br>
+For reads, the array is volatile, the element of the array is Node, the K of Node is final, the V is volatile, and the next node is volatile to ensure the visibility of multiple threads.<br>
+LinkedHashMap LinkedHashMap inherits from HashMap, so its underlying structure is still based on a zip chain hash structure consisting of arrays and linked lists or red-black trees. In addition, LinkedHashMap adds a bidirectional linked list to the above structure, allowing the above structure to maintain the insertion order of key-value pairs.<br>
+TreeMap ordered Map, red-black tree structure, can be customized comparator to sort.<br>
+Collections.synchronizedmap how to implement the Map thread safe? Based on Synchronized, it essentially locks the currently passed Map object.<br>
+<b>3. Set (unique value)</b><br>
+HashSet is based on the HashMap implementation, which uses K of HashMap as the element store and V as new Object(). If the Hash values of two elements are the same in the add() method, the equals method is used to compare whether they are equal.<br>
+A LinkedHashSet inherits from a HashSet and is internally implemented through a LinkedHashMap.<br>
+The TreeSet red-black tree is ordered and unique.<br>
