@@ -85,3 +85,94 @@ Collections.synchronizedmap how to implement the Map thread safe? Based on Synch
 HashSet is based on the HashMap implementation, which uses K of HashMap as the element store and V as new Object(). If the Hash values of two elements are the same in the add() method, the equals method is used to compare whether they are equal.<br>
 A LinkedHashSet inherits from a HashSet and is internally implemented through a LinkedHashMap.<br>
 The TreeSet red-black tree is ordered and unique.<br>
+
+<b>3.Java multithreading</b><br>
+1. synchronized<br>
+Modifies the underlying implementation of the code block by marking it as a synchronous code block through monitorenter & monitorexit.<br>
+Modifies the underlying implementation of the method, indicating that the method is synchronized by ACC_SYNCHRONIZED.<br>
+When you modify a class object, you actually lock onto an instance of the class.<br>
+Singleton pattern<br>
+public class Singleton {
+
+    private static volatile Singleton instance = null;
+
+    private Singleton(){}
+
+    public static Singleton getInstance(){
+    if (null == instance) {
+        synchronized (Singleton.class) {
+            if (null == instance) {
+            instance = new Singleton();
+            }
+        }
+      }
+        return instance;
+        }
+}<br>
+<b>Bias lock, spin lock, lightweight lock, heavyweight lock</b><br>
+With synchronized, the first thread acquires a biased lock, and then other threads compete for the lock and upgrade to a lightweight lock. The other threads attempt to acquire the lock in a cyclic manner, called spin locks. If the number of spins reaches a certain threshold, it is upgraded to a heavyweight lock.<br>
+Note that when the second thread acquires a lock, it determines if the first thread is still alive, and if it is not, it is not upgraded to a lightweight lock.<br>
+
+2. Lock<br>
+ReentrantLock<br>
+Based on AbstractQueuedSynchronizer (AQS) implementation, there are mainly the state (resources) + FIFO (thread waiting queue).<br>
+Fair lock and unfair lock: The difference is that when a lock is acquired, the fair lock determines whether there are waiting threads in the current queue, and queues them if there are.<br>
+Use the lock() and unLock() methods to unlock.<br>
+ReentrantReadWriteLock<br>
+Also based on the AQS implementation, the internal use of inner class to implement the read lock (shared lock) and write lock (exclusive lock).<br>
+The unfair lock throughput is high in the lock acquisition phase. When a thread wants to acquire a lock, the unfair lock can directly attempt to acquire the lock, rather than judging whether there is a thread waiting in the current queue. In some cases, frequent context switching can be avoided. In this way, the active thread may acquire the lock, but the lock in the queue must be woken up before it can continue to attempt to acquire the lock, and the execution order of the thread generally does not affect the running of the program.<br>
+
+<b>3、volatile</b><br>
+Java memory model<br>
+![image](https://user-images.githubusercontent.com/88880169/219709447-4f1c2588-1a2e-475b-97cc-3d65fb90e397.png)
+
+Ensure variable visibility in multithreaded environments. When volatile modifies a variable, it is synchronized to main memory immediately after it is modified, and flushed from main memory each time the variable is used.<br>
+Disallow JVM instruction reordering.<br>
+Why is the singleton double check lock variable volatile? JVM instructions are not allowed to reorder. new Object() is divided into three steps: apply for memory space, assign memory space references to variables, and initialize variables. If reordering is not prohibited, it is possible to get an uninitialized variable.<br>
+
+4. The five states of threads<br>
+1). New<br>
+A new thread has been created and has not yet started running.<br>
+
+2). Runnable<br>
+A thread enters the Runnable state when it is ready to run.<br>
+
+The Runnable state can be a thread that is actually running or a thread that is ready to run.<br>
+
+In a multithreaded environment, each thread is allocated a fixed amount of CPU time. Each thread runs for a while and then stops to allow other threads to run, so that each thread can run fairly. These waiting cpus and running threads are in the Runnable state.<br>
+
+3). Blocked<br>
+For example, if a thread is waiting for an I/O resource, or if the protected code it wants to access has been locked by another thread, it will be in the Blocked state, and the thread will be in the Runnable state once the required resources are in place.<br>
+
+4) Waiting (for a long time)<br>
+If a thread is Waiting for another thread to wake it up, it is in the waiting state. The following methods put the thread into a wait state:<br>
+
+Object.wait()<br>
+Thread.join()<br>
+LockSupport.park()<br>
+5) The Timed Waiting table<br>
+The system automatically wakes up after a certain period of time without waiting for other threads to display wake up.<br>
+
+The following methods put the thread into a finite wait state:<br>
+
+Thread.sleep(sleeptime)<br>
+Object.wait(timeout)<br>
+Thread.join(timeout)<br>
+LockSupport.parkNanos(timeout)<br>
+LockSupport.parkUntil(timeout)<br>
+6). Terminated<br>
+When a thread completes normally, or fails unexpectedly, it is finished.<br>
+
+5. wait() and sleep()<br>
+The thread enters the waiting state after the call.<br>
+wait() releases the lock, sleep() does not.<br>
+A call to wait() requires a call to notify() or notifyAll() to wake up the thread.<br>
+The wait() method is declared in Object and the sleep() method is declared in Thread.
+6. yield()<br>
+The thread enters the runnable state after the invocation.<br>
+The CPU time slice is freed up, and it is possible that another thread later gains execution rights, or that thread continues to execute.<br>
+7. join()<br>
+The Join() method of thread A is called in thread B, and the execution of thread B will not continue until thread A finishes executing.<br>
+Sequential execution of threads is guaranteed.<br>
+The join() method must be called after the thread has started to be meaningful.<br>
+This is implemented using the wait() method.<br>
