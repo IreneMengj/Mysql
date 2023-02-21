@@ -9,8 +9,18 @@ Java Virtual Machine - Runtime environment for java programs (runtime environmen
 <b>compare: jvm,jre,jdk</b><br>
 1. JRE (Java Runtime Environment): It includes the JVM along with other libraries and components required to run Java applications. The JRE doesn't include any development tools, and it's meant for end-users who want to run Java programs on their machines.<br>
 2. JDK (Java Development Kit): It's a software development kit that includes the JRE and additional tools for developing Java applications. The JDK includes a compiler for converting Java source code into bytecode, along with other tools for debugging, testing, and documentation.<br>
-
 3. To summarize, the JVM is the runtime environment that executes Java code, the JRE is the environment that allows end-users to run Java applications, and the JDK is the software development kit that includes tools for building and debugging Java applications.<br>
+
+<h3>Memory structure</h3><br>
+1. Program counter 2. Virtual machine stack 3. Local method stack 4. Heap 5. Method area <br>
+
+Program Counter Register:
+To remember the execution address of the next jvm instruction
+<b>characteristic</b>
+<li>It's thread private</li>是线程私有的
+<li>There is no memory overflow</li>
+
+
 
 
 
