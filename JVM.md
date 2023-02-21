@@ -29,6 +29,10 @@ The amount of memory that each thread needs to run is called the virtual machine
 Local variables within a method are thread-safe if they are not accessed from the action of the method<br>
 If a local variable references an object and escapes the scope of the method, you need to consider thread safety<br>
 
+Stack Memory Overflow <br>
+1.Excessive stack frames cause stack memory overflow<br>
+2.Too large stack frame causes stack memory overflow<br>
+
 
 
 
