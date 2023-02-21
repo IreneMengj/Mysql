@@ -14,13 +14,13 @@ Java Virtual Machine - Runtime environment for java programs (runtime environmen
 <h3>Memory structure</h3><br>
 1. Program counter 2. Virtual machine stack 3. Local method stack 4. Heap 5. Method area <br>
 
-Program Counter Register:
+<b>Program Counter Register</b>:
 To remember the execution address of the next jvm instruction
 <b>characteristic</b>
 <li>It's thread private</li>是线程私有的
 <li>There is no memory overflow</li>
 
-Java Virtual Machine Stacks:<br>
+<b>Java Virtual Machine Stacks</b>:<br>
 The amount of memory that each thread needs to run is called the virtual machine stack. Each stack is made up of multiple stack frames, which corresponds to the amount of memory used for each method call. Each thread can only have one active stack Frame, which corresponds to the method that is currently executing<br>
 
 1. Does garbage collection involve stack memory?<br>
