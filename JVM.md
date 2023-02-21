@@ -23,6 +23,12 @@ To remember the execution address of the next jvm instruction
 Java Virtual Machine Stacks:<br>
 The amount of memory that each thread needs to run is called the virtual machine stack. Each stack is made up of multiple stack frames, which corresponds to the amount of memory used for each method call. Each thread can only have one active stack Frame, which corresponds to the method that is currently executing<br>
 
+1. Does garbage collection involve stack memory?<br>
+2. Is larger stack memory allocation better?<br>
+3. Are local variables within methods thread-safe?<br>
+Local variables within a method are thread-safe if they are not accessed from the action of the method<br>
+If a local variable references an object and escapes the scope of the method, you need to consider thread safety<br>
+
 
 
 
