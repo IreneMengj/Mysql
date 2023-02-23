@@ -139,4 +139,44 @@ Person p; This is created by class object.
         name1.get(c);
 ```
 <p>In Java programming, "暴力反射" can be translated to "reflection" or "reflection attack". It refers to a type of attack where an attacker uses Java reflection to access and manipulate private or protected fields and methods of a class, which are not intended to be accessed or modified by external code. This can be a security vulnerability if the class is not designed to handle external access in a secure manner.</p>
+> Case:
+- Requirements: Requirements: Write a framework that can help us create objects of any class and execute any method without changing any code in that class  
+- Implementation:
+1. Configure the file
+2: Reflection
+- Steps:
+1. Define the class name of the object to be created and the method to be executed in the configuration file
+2. Load and read the configuration file in the program
+3. Use reflection technology to load class files into memory
+4. Create objects
+5. Execution method   
+
+```
+className=JavaWeb.Computer
+methodName=eat
+
+
+
+  public static void main(String[] args) throws Exception {
+        //load properties
+        //1.1 create pro object
+        Properties pro = new Properties();
+        //1.2load properties and convert to a collection
+        //1.2.1 get configuration under class catalog
+        ClassLoader classLoader = ReflectTest.class.getClassLoader();
+        InputStream resourceAsStream = classLoader.getResourceAsStream("pro.properties");
+        pro.load(resourceAsStream);
+        //2.get data defined in configuration
+        String className = pro.getProperty("className");
+        String methodName = pro.getProperty("methodName");
+        //3.Load the class into memory
+        Class<?> aClass = Class.forName(className);
+        //4.create object
+        Object o = aClass.newInstance();
+        //5.get method objects
+        Method method = aClass.getMethod(methodName);
+        //6.execute method
+        method.invoke(o);
+    }
+```    
 
