@@ -73,6 +73,7 @@ The method area is considered to be a non-heap memory area because it is not use
 <b>Run time constant pool</b><br>
 A constant pool is a table that virtual machine instructions use to find the class name, method name, parameter type, literals, and so on. The constant pool is in the *.class file. When the class is loaded, its constant pool information is put into the run time constant pool and the symbolic address in it is changed to the real address<br>
 
+<b>String table</b><br>
 
 
 
