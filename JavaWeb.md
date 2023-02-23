@@ -79,7 +79,18 @@ Person p; This is created by class object.
 2. class name: Obtained through the class attribute of the class name
 3. getClass(): The getClass() method is defined in the object class
 
-
+```
+//1.Class.forname
+        Class cls1=Class.forName("JavaWeb.Computer");
+        System.out.println(cls1);
+        //2. class name
+        Class<Computer> cls2 = Computer.class;
+        System.out.println(cls2);
+        //3. getClass()
+        Computer computer=new Computer();
+        Class<? extends Computer> cls3 = computer.getClass();
+        System.out.println(cls3);
+```        
 
 
 
