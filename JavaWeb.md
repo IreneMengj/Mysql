@@ -138,4 +138,5 @@ Person p; This is created by class object.
         name1.setAccessible(true);//reflection attack
         name1.get(c);
 ```
+<p>In Java programming, "暴力反射" can be translated to "reflection" or "reflection attack". It refers to a type of attack where an attacker uses Java reflection to access and manipulate private or protected fields and methods of a class, which are not intended to be accessed or modified by external code. This can be a security vulnerability if the class is not designed to handle external access in a secure manner.</p>
 
