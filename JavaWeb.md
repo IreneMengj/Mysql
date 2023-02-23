@@ -76,8 +76,11 @@ Person p; This is created by class object.
 
 > To get the Class object:
 1. Class.forname (" full Class name "): Loads the bytecode file into memory and returns the Class object
+* Most commonly used in configuration files, where the class name is defined. Read the file and load the class
 2. class name: Obtained through the class attribute of the class name
+* Most used for parameter passing
 3. getClass(): The getClass() method is defined in the object class. 
+* Most often used as a way of obtaining bytecode for objects
 <b>4. conclusion:</b> The same bytecode file (*.class) is loaded only once during a program run, and the CLASS object is the same either way
 
 ```
@@ -93,7 +96,27 @@ Person p; This is created by class object.
         System.out.println(cls3);
 ```        
 
-
+<b>Class object function</b>:  
+- Access function:  
+1. Get member variables;  
+- Field[] getFields();
+- Field getField(String name)
+- Field[] getDeclaredFields()
+- Field[] getDeclaredField(String name)
+2. Get constructors;   
+- Constructor<?>[]	getConstructors()
+- Constructor<T>	getConstructor(Class<?>... parameterTypes)
+- Constructor<?>[]	getDeclaredConstructors()
+- Constructor<T>	getDeclaredConstructor(Class<?>... parameterTypes)
+3. Access to member methods;   
+- Method[]	getMethods()
+- Method	getMethod(String name, Class<?>... parameterTypes)
+- Method[]	getDeclaredMethods()
+- Method	getDeclaredMethod(String name, Class<?>... parameterTypes)
+4. Obtain the class name.  
+- Class<?>[]	getClasses()
+- Class<?>[]	getDeclaredClasses()
+- Class<?>	getDeclaringClass()  
 
 
 
