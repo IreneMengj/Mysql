@@ -5,7 +5,7 @@ Use JAVA to complete the server-side program development<br>
 Black box testing: No need to write code, give the input value, see if the program can output the expected value<br>
 White box testing: You need to write code and focus on how the program executes, such as JUNIT<br>
 
-<b>Junit</b>.  
+<b>1. Junit</b>.  
 Steps:  
 1. Define a test class (test case)  
 Suggestion: 
@@ -56,6 +56,23 @@ public void testAdd(){
 Red: Failure  
 Green: Success  
 Typically we use assertion operations to process the result  
+
+<b>2. Reflection</b>: Soul of frame design  
+Framework: work-in-progress software. Can carry out software development on the basis of framework again, simplify coding  
+Reflection: Encapsulating parts of a class as other objects is the reflection mechanism  
+
+> JAVA code goes through three phases in a computer
+- source code stage(hard disk). 
+Person.java --(javac compile)----> Person.class. 
+- class object stage. 
+ClassLoader will load Person.class to (memory).   
+- runtime stage  
+Person p; This is created by class object.   
+
+![image](https://user-images.githubusercontent.com/88880169/220913648-ba494b88-7caf-4289-964a-0fb707488af8.png)
+
+
+
 
 
 
