@@ -60,6 +60,9 @@ Typically we use assertion operations to process the result
 <b>2. Reflection</b>: Soul of frame design  
 Framework: work-in-progress software. Can carry out software development on the basis of framework again, simplify coding  
 Reflection: Encapsulating parts of a class as other objects is the reflection mechanism  
+Advantages:  
+1. These objects can be operated in the program operation project;
+2. Can decouple, improve the program scalability.  
 
 > JAVA code goes through three phases in a computer
 - source code stage(hard disk). 
@@ -70,6 +73,11 @@ ClassLoader will load Person.class to (memory).
 Person p; This is created by class object.   
 
 ![image](https://user-images.githubusercontent.com/88880169/220913648-ba494b88-7caf-4289-964a-0fb707488af8.png)
+
+> To get the Class object:
+1. Class.forname (" full Class name "): Loads the bytecode file into memory and returns the Class object
+2. class name: Obtained through the class attribute of the class name
+3. getClass(): The getClass() method is defined in the object class
 
 
 
