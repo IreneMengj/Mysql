@@ -19,5 +19,28 @@ Suggestion:
 3. add @Test. 
 4. import junit dependency. 
 
+Simple version: install JunitGenerator in Idea and press command+N in the class to generate test class. 
+
+```
+//computer class with two methods
+public class Computer {
+    public Integer add(int a, int b){
+        return a+b;
+    }
+    public Integer reduce(int a,int b){
+        return a-b;
+    }
+}
+@Test
+public void testAdd(){
+    //1.create object
+    Computer computer = new Computer();
+    //2.call add method
+    int sum = computer.add(1, 2);
+    //System.out.println(sum);
+    Assert.assertEquals(3,sum);
+} 
+```
+
 
 
