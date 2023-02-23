@@ -31,6 +31,17 @@ public class Computer {
         return a-b;
     }
 }
+//    Initialization method:
+//    For resource requests, all test methods execute this method before execution
+@Before
+public void before(){
+}
+
+//    Methods of resource release:
+//    After all test methods have been executed, the method is automatically executed
+@After
+public void after(){
+} 
 @Test
 public void testAdd(){
     //1.create object
@@ -41,6 +52,11 @@ public void testAdd(){
     Assert.assertEquals(3,sum);
 } 
 ```
+- Judgment result:  
+Red: Failure  
+Green: Success  
+Typically we use assertion operations to process the result  
+
 
 
 
