@@ -99,10 +99,10 @@ Person p; This is created by class object.
 <b>Class object function</b>:  
 - Access function:  
 1. Get member variables;  
-- Field[] getFields();
-- Field getField(String name)
-- Field[] getDeclaredFields()
-- Field[] getDeclaredField(String name)
+- Field[] getFields(); Gets the public modified member variable
+- Field getField(String name)Gets the public modified member variable
+- Field[] getDeclaredFields() Gets all member variables, regardless of modifiers
+- Field[] getDeclaredField(String name) Gets all member variables, regardless of modifiers
 2. Get constructors;   
 - Constructor<?>[]	getConstructors()
 - Constructor<T>	getConstructor(Class<?>... parameterTypes)
@@ -119,4 +119,23 @@ Person p; This is created by class object.
 - Class<?>	getDeclaringClass()  
 
 
+```
+ Field[] fields = computerClass.getFields();
+        for(Field field:fields){
+            System.out.println(field);
+        }
+        Field name = computerClass.getField("name");
+        System.out.println(name);
+        Computer c = new Computer();
+        Object o = name.get(c);
+        System.out.println(o);
+        name.set(c,"mac");
+        System.out.println(c.name);
+        System.out.println("==================");
+        computerClass.getDeclaredFields();
+        Field name1 = computerClass.getDeclaredField("name");
+        //Ignore security checks for access modifiers
+        name1.setAccessible(true);//reflection attack
+        name1.get(c);
+```
 
