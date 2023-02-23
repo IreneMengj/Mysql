@@ -16,6 +16,7 @@ Suggestion:
 - Method name: test + Method name  <b>testAdd()</b>
 - Return value: void
 - Parameter list: empty parameter
+3. add @Test
 
 
 
