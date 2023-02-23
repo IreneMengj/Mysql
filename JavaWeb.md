@@ -9,11 +9,11 @@ White box testing: You need to write code and focus on how the program executes,
 Steps:  
 1. Define a test class (test case)  
 Suggestion: 
-- Test class name: Name of the class to be tested Test ComputerTest  
-- Package name: xxx.xxx.xx.test cn.itcast.test
+- Test class name: Name of the class+Test <b>ComputerTest</b>.  
+- Package name: xxx.xxx.xx.test <b>cn.itcast.test</b>. 
 2. Define test methods: They can be run independently  
 Suggestion:   
-- Method name: test Method name of the test testAdd()
+- Method name: test + Method name  <b>testAdd()</b>
 - Return value: void
 - Parameter list: empty parameter
 
