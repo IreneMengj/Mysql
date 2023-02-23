@@ -77,8 +77,8 @@ Person p; This is created by class object.
 > To get the Class object:
 1. Class.forname (" full Class name "): Loads the bytecode file into memory and returns the Class object
 2. class name: Obtained through the class attribute of the class name
-3. getClass(): The getClass() method is defined in the object class
-<b>conclusion:</b> The same bytecode file (*.class) is loaded only once during a program run, and the CLASS object is the same either way
+3. getClass(): The getClass() method is defined in the object class. 
+<b>4. conclusion:</b> The same bytecode file (*.class) is loaded only once during a program run, and the CLASS object is the same either way
 
 ```
 //1.Class.forname
