@@ -60,8 +60,28 @@ Grammar:
 7. div and span  
    - Each div takes up an entire line of block-level labels
    - span： Text information is displayed on a single line, with labels inside the line
-9.
-  
+8. form
+   - Used to collect user input data; used to interact with the server. 
+     - action: Specify the URL to submit the data
+     - method: get and post
+       - get：1. he request parameters are displayed in the address bar and are encapsulated in the request line. 
+              2. The request parameter size is limited. 
+              3. Not very safe. 
+       - post: 1. Request parameters are encapsulated in the request body instead of displayed in the address bar. 
+               2. There is no limit to the size of the request parameter. 
+               3. Relatively safe. 
+     - name：For data in a form entry to be submitted, you must specify the NAME attribute
+
+```
+<form action="/action_page.php" method="get">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+</form>
+```
   
   
 
