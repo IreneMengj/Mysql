@@ -216,3 +216,59 @@ public @interface AnnoDemo1 {
 }
 @AnnoDemo1(value = 13,show="haha",strs="heihei",p=Person.p1)
 ```
+<b>Meta-annotation:</b> The annotation used to describe the annotation   
+- @Target: Describes where annotations can be used
+  - TYPE: It can be applied to classes
+  - METHOD: It can be applied to methods
+  - FIELD: It can be applied to member variables
+- @Retention: Describes the phases in which annotations are retained
+- @Documented: Describes whether annotations are extracted into the api document
+- @Inherited: Describes whether annotations are inherited by subclasses. 
+
+```
+@Target(value = {ElementType.TYPE,ElementType.METHOD,ElementType.FIELD})//Indicates that this annotation can only be applied to the class
+@Retention(RetentionPolicy.RUNTIME)//The annotation currently described is kept in the class bytecode file and read by the JVM
+@Documented
+@Inherited
+public @interface AnnoDemo1 {}
+```
+<b>Using annotations in a program:</b> Gets the value of the property defined in the annotation    
+1. Get the object (class, method, field) where the annotation is defined.   
+2. Get the specified annotation   
+3. Call the abstract method in the annotation to get the configured property values   
+
+```
+@Pro(className = "JavaWeb.Computer",methodName = "eat")
+public class ReflectTest01 {
+    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+        //1.Parsing annotation
+        //1.1 Gets the class bytecode file object
+        Class<ReflectTest01> reflectTest01Class = ReflectTest01.class;
+        //2. Gets the annotation object above
+        //A subclass implementation object of the annotation interface is generated in memory
+        /*
+        public class ProImpl implements Pro{
+           String className(){
+                return "JavaWeb.Computer";
+           }
+           String methodName(){
+                return "eat";
+           }
+        }
+         */
+        Pro annotation = reflectTest01Class.getAnnotation(Pro.class);
+
+        //3. Call the abstract method defined by the annotation to get the return value
+        String className = annotation.className();
+        String methodName = annotation.methodName();
+        //4.Load the class into memory
+        Class<?> aClass = Class.forName(className);
+        //5.create object
+        Object o = aClass.newInstance();
+        //6.get method objects
+        Method method = aClass.getMethod(methodName);
+        //7.execute method
+        method.invoke(o);
+    }
+}
+```
