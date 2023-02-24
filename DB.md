@@ -28,7 +28,16 @@ Defines a language to operate on all relational databases.
 - Create the database and specify the character set.    
   create database if not exists +name character set gbk;    
 - Create a db4 database, determine whether it exists, and specify the character set gbk.   
-  create database if not exists +name character set gbk;    
+  create database if not exists +name character set gbk;
+- data type:
+  - int
+  - double: score double(5,1)
+  - date:yyyy-MM-dd
+  - datetime:yyyy-MM-dd HH:mm:ss
+  - timestamp: yyyy-MM-dd HH:mm:ss  If this field is not assigned in the future, or is null, the current system time is used by default for automatic assignment
+  - varchar  
+- copy table. 
+  create table +name like +Name of the table being replicated;
 <b> R:RETRIVE</b>
 - Query the name of a database.      
   show databases;
@@ -46,3 +55,7 @@ Defines a language to operate on all relational databases.
   drop database + name;
 - If the database exists, delete it.  
   drop database if exists +name;
+- drop tables.  
+  drop table +name;  
+  drop table if exists +name;
+  
