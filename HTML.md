@@ -99,6 +99,7 @@ Grammar:
 - select
 - textarea
 - file 
+> three types of button:
 - submit
 - button
 - image： Image submit button, you can specify the image path through the src attribute
