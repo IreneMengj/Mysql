@@ -179,4 +179,40 @@ methodName=eat
         method.invoke(o);
     }
 ```    
+<b>3. Annotation</b>:  
+Concept: An illustration of a program, shown to a computer. 
+Comment: Use words to describe the program, for programmers to see.  
 
+Classification of functions:   
+1. Write documentation: Generate doc documents using annotations identified in the code.  
+2. Code analysis: Use reflection to analyze code through annotations identified in code. 
+3. Compilation check: Allow the compiler to implement basic compilation checks (such as override) by identifying annotations in the code.  
+
+JDK predefined Annotation:   
+- @override: detects whether the method annotated by the annotation inherits from the parent class  
+- @Deprecated: The annotation indicates that the content is out of date. 
+- @SuppressWarnings: Suppress the warning, usually passing the parameter "all". 
+
+Custom annotation：    
+An annotation is essentially an interface and inherits the Annotation interface by default.  
+1. The return value type of the annotation interface method(attribute).  
+- Basic data type
+- String 
+- enumeration
+- annotation
+- An array of the above types
+
+2. Attributes are defined and need to be assigned values when used  
+- If the default keyword is used to initialize the attribute when defining it, then the annotation can be used without assigning the attribute
+- If only one attribute needs to be assigned, and the attribute's name is Value, you can omit Value and define the value directly
+- When the array is assigned, the value is wrapped with {}. If the array has only one value, the {} is omitted. 
+
+```
+public @interface AnnoDemo1 {
+    int value();
+    String show();//string
+    String[] strs(); //array
+    Person p();//enum
+}
+@AnnoDemo1(value = 13,show="haha",strs="heihei",p=Person.p1)
+```
