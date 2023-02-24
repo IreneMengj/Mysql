@@ -95,6 +95,10 @@ Grammar:
   * For multiple checkboxes to have a radio effect, the NAME property of the multiple checkboxes must have the same value
   * A VALUE attribute is typically given to each checkbox, specifying the value to submit when it is selected
   * CHECKED property, the default value can be specified
-- label: The for attribute of the label usually corresponds to the id attribute of the input. If so, clicking on the label field will bring the input field into focus  
+> label: The for attribute of the label usually corresponds to the id attribute of the input. If so, clicking on the label field will bring the input field into focus  
 - select
-- textarea 
+- textarea
+- file 
+- submit
+- button
+- image： Image submit button, you can specify the image path through the src attribute
