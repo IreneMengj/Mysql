@@ -1,6 +1,31 @@
 <b>What is JavaWeb?</b><br>
 Use JAVA to complete the server-side program development<br>
-Develop Internet projects using JAVA   
+Develop Internet projects using JAVA  
+
+Software architecture:
+1. C/S ： Client server  
+There is a client program locally and a server program remotely, such as QQ  
+Advantages: Good user experience  
+Disadvantages: Troublesome to develop, install, deploy and maintain  
+
+2. B/S： Browser server     
+All it takes is a browser, and users access different server programs through different web addresses   
+Cons: If the application is too large, the user experience may be affected   
+High requirements on hardware      
+
+Resource classification:  
+1. Static resources  
+Resources published using static web development techniques  
+Features:   
+All users access it, and you get the same result    
+For example: text, pictures, audio, video, HTML,CSS,JAVASCRIPT  
+If the user requests a static resource, the server sends the static resource directly to the browser. A static resource parsing engine is built into the browser to display static resources.   
+
+2. Dynamic Resources.    
+Use dynamic web pages to publish resources in a timely manner. 
+Features:  
+All users access, the result may not be the same, such as JSP/SERVLET. 
+If the user requests a dynamic resource, the server executes the dynamic resource, converts it to a static resource, and sends it to the browser. 
 
 <b>Testing type</b><br>
 Black box testing: No need to write code, give the input value, see if the program can output the expected value<br>
