@@ -96,10 +96,10 @@ Grammar:
   * A VALUE attribute is typically given to each checkbox, specifying the value to submit when it is selected
   * CHECKED property, the default value can be specified
 > label: The for attribute of the label usually corresponds to the id attribute of the input. If so, clicking on the label field will bring the input field into focus  
-- select
-- textarea
 - file 
 > three types of button:
 - submit
 - button
 - image： Image submit button, you can specify the image path through the src attribute
+- select tag 
+- textarea tag
