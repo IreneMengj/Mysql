@@ -37,7 +37,7 @@ Defines a language to operate on all relational databases.
   - timestamp: yyyy-MM-dd HH:mm:ss  If this field is not assigned in the future, or is null, the current system time is used by default for automatic assignment
   - varchar  
 - copy table. 
-  create table +name like +Name of the table being replicated;
+  create table +name like +Name of the table being replicated;  
 <b> R:RETRIVE</b>
 - Query the name of a database.      
   show databases;
@@ -49,7 +49,18 @@ Defines a language to operate on all relational databases.
   desc + name;   
 <b>U:UPDATE</b>.  
 - Modify the character set of the database.  
-  alter database +name character set +gbk;      
+  alter database +name character set + Character set name;   
+- Modify table name
+  - alter table+name rename to +new name;
+- Modify the character set of a table
+  - alter table +name character set + Character set name；
+- Add a column
+  - alter table +name add +column name+datatype;
+- Modify the column name and type
+  - alter table +name change column name +newName+datatype;
+  - alter table+name modify column name+datatype;
+- Delete column 
+  - alter table +name drop column name; 
 <b>D:DELETE</b>
 - Delete database.  
   drop database + name;
