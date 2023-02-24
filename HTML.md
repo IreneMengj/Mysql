@@ -82,6 +82,17 @@ Grammar:
   <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
 </form>
 ```
+```
+<input type="text">  
+<input type="radio">
+<input type="password">
+<input type="checkbox">
   
-  
-
+```
+- text:
+  * placeholder: Specify the prompt information of the input box. When the content of the input box changes, the prompt information is automatically cleared  
+- radio：
+  * For multiple checkboxes to have a radio effect, the NAME property of the multiple checkboxes must have the same value
+  * A VALUE attribute is typically given to each checkbox, specifying the value to submit when it is selected
+  * CHECKED property, the default value can be specified
+- 
