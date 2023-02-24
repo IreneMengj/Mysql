@@ -15,4 +15,30 @@ Defines a language to operate on all relational databases.
 - Multiline comment：/* */
 
 
+![image](https://user-images.githubusercontent.com/88880169/221164616-0d8b4891-86e2-48ab-bcf8-d0faeaf3595d.png)
 
+
+1. DDL(Data Definition Language):operate database and table. 
+> CRUD(C:CREATE;R:RETRIVE;U:UPDATE;D:DELETE)
+<b>C:CREATE</b>  
+- Create a database:   
+  create database + name;   
+- Create a database, check that the database does not exist, and create it again.   
+ create database if not exists +name;   
+- Create the database and specify the character set.    
+  create database if not exists +name character set gbk;    
+- Create a db4 database, determine whether it exists, and specify the character set gbk.   
+  create database if not exists +name character set gbk;    
+<b> R:RETRIVE</b>
+- Query the name of a database.      
+  show databases;
+- Query the character set of a database: Queries the creation statement of a database.     
+  show create database + name;   
+<b>U:UPDATE</b>.  
+- Modify the character set of the database.  
+  alter database +name character set +gbk;      
+<b>D:DELETE</b>
+- Delete database.  
+  drop database + name;
+- If the database exists, delete it.  
+  drop database if exists +name;
