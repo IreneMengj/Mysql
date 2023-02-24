@@ -89,6 +89,7 @@ Grammar:
 <input type="checkbox">
   
 ```
+input type.  
 - text:
   * placeholder: Specify the prompt information of the input box. When the content of the input box changes, the prompt information is automatically cleared  
 - radio：
@@ -100,6 +101,8 @@ Grammar:
 > three types of button:
 - submit
 - button
-- image： Image submit button, you can specify the image path through the src attribute
+- image： Image submit button, you can specify the image path through the src attribute  
+
+<hr>
 - select tag 
 - textarea tag
