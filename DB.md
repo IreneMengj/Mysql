@@ -19,7 +19,7 @@ Defines a language to operate on all relational databases.
 
 
 1. DDL(Data Definition Language):operate database and table. 
-> CRUD(C:CREATE;R:RETRIVE;U:UPDATE;D:DELETE)
+> CRUD(C:CREATE;R:RETRIVE;U:UPDATE;D:DELETE).    
 <b>C:CREATE</b>  
 - Create a database:   
   create database + name;   
@@ -34,6 +34,10 @@ Defines a language to operate on all relational databases.
   show databases;
 - Query the character set of a database: Queries the creation statement of a database.     
   show create database + name;   
+- Query all the table names of a database.  
+  show tables;   
+- Query table structure.        
+  desc + name;   
 <b>U:UPDATE</b>.  
 - Modify the character set of the database.  
   alter database +name character set +gbk;      
