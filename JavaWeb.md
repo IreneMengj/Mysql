@@ -1,5 +1,6 @@
 <b>What is JavaWeb?</b><br>
 Use JAVA to complete the server-side program development<br>
+Develop Internet projects using JAVA   
 
 <b>Testing type</b><br>
 Black box testing: No need to write code, give the input value, see if the program can output the expected value<br>
