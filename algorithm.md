@@ -49,8 +49,6 @@
 > - Conquer: Recursively sort sequences S1 and S2.
 > - Combine: Put the elements back into S by merging the sorted sequences S1 and S2 into a sorted sequence
 
-
-
 <img width="475" alt="image" src="https://user-images.githubusercontent.com/88880169/221359670-19e2c7b3-272f-4956-88bf-f0fa11e5aa5b.png">
 <img width="475" alt="image" src="https://user-images.githubusercontent.com/88880169/221359703-185fa66e-0ef0-4e8a-a9a3-11fad164e8f5.png">
 <img width="475" alt="image" src="https://user-images.githubusercontent.com/88880169/221359707-c66a9b37-fd61-45f7-b707-ed45614afb5b.png">
@@ -62,6 +60,23 @@
   - Always O(N*logN) because merge is O(N), and division is O(logN).
   - Overhead of creating temp array and copying data.
   - For large dataset Quicksort outperforms it.
+
+### Quicksort
+  - Like merge-sort, Quicksort algorithm is also based on divide-and-conquer paradigm.
+  - steps:
+    - Divide: if S has at least two elements (nothing needs to be done if S has zero or one elements), select a specific element x from S, called a pivot.     As is common in practice, choose the pivot to be the last element in S. Remove all elements from S and put them into two sequences:
+      - L, storing the elements in S less than or equal to x 
+      - G, storing the elements in S greater that x
+    - Conquer: Recursively sort sequences L and G.
+    - Combine: put back the elements in sorted order by first inserting the elements of L, and then those of G
+<img width="475" alt="image" src="https://user-images.githubusercontent.com/88880169/221375872-241c19f0-b0d4-4848-aefc-95925183ac31.png">
+<img width="475" alt="image" src="https://user-images.githubusercontent.com/88880169/221375880-827b37c1-75f6-4d1f-a363-20fdbc3e1496.png">
+  - time complexity. 
+  - A common method for analyzing quicksort is to assume the pivot will always divide the sequence into a reasonably balanced manner.
+  - Best: O(N*logN)
+  - The way to get close to the best-case running time, is for the pivot to divide the input sequence S almost equally.
+  - Worst-case: is O(𝑁^2) why?
+  - Pick the worst possible pivot, so that one of the partitions has only a single element (the array is sorted in reverse order). 
 
 
 <h3>Generic Programming</h3>
@@ -307,20 +322,5 @@ public static boolean isPalindrome(String str) {
 
 <hr>
 <p>Write a recursive function that prints all the values from a linked list.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
