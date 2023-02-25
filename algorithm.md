@@ -175,6 +175,7 @@ divide-and-conquer:
    - Memoization is where you (your program) memorize previously computed results, which can be used wherever the same result is needed. Like caching. 
    - We keep track of previously solved subproblems, and use lookups when needed. 
    - We can use this to prevent re-computing older computations. Hash maps and arrays can be used to hold onto computations such as these.  
+
 ```
 import java.util.HashMap;
 
@@ -202,7 +203,7 @@ public class FibonacciMemoization {
     }
 }
 ```
-
+<hr>
 
 
 <h3>Recursion</h3>
@@ -222,6 +223,8 @@ This is the process in which a method calls itself continuously.
   <img width="837" alt="image" src="https://user-images.githubusercontent.com/88880169/221359540-d7112e04-3f77-400c-8a58-d11f2529465f.png">
 
 we can write the Fibonacci sequence recursively and iteratively. 
+<hr>
+
 ```
 public static int fibonacciRecursive(int n) {
     if (n <= 2) {
@@ -231,6 +234,8 @@ public static int fibonacciRecursive(int n) {
     }
 }
 ```
+<hr>
+
 ```
 public static int fibonacciIterative(int n){
   if(n<=2){
@@ -248,9 +253,11 @@ public static int fibonacciIterative(int n){
   
 }
 ```
-You are required to write a function called Power(int x, int y) which returns the value of xy.
+<hr>
+<p> You are required to write a function called Power(int x, int y) which returns the value of xy.
 - Write a recursive version of this function.
-- Write an iterative version of this function.
+- Write an iterative version of this function.</p>
+<hr>
 
 ```
 public static void main(String[] args) {
@@ -273,7 +280,14 @@ public static void main(String[] args) {
         return x;
     }
 ```
-Write a recursive function that detects if a string is a palindrome (a palindrome is a word that can be read the same way backward and forward, e.g. racecar, navan, abba). 
+
+
+<hr>
+
+<p> Write a recursive function that detects if a string is a palindrome (a palindrome is a word that can be read the same way backward and forward, e.g. racecar, navan, abba). </p>
+
+<hr>
+
 ```
 public static boolean isPalindrome(String str) {
     if (str.length() <= 1) {
@@ -291,7 +305,8 @@ public static boolean isPalindrome(String str) {
 }
 ```
 
-Write a recursive function that prints all the values from a linked list.
+<hr>
+<p>Write a recursive function that prints all the values from a linked list.</p>
 
 
 
