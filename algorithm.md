@@ -43,6 +43,107 @@
      - Worst-case performance if data is sorted inversely, giving O(𝑛^2).
      - Inner loop never executes if data is sorted, giving O(n).
 
+Generic Programming. 
+<hr>
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/88880169/221354907-2ccceb9a-597c-49e7-9c37-1cd5f1f64207.png">
+<img width="534" alt="image" src="https://user-images.githubusercontent.com/88880169/221354911-daa7b7a6-ead7-4348-a64f-fab239c1723e.png">
+<hr>
+Generic Programming – Searching or Sorting. 
+<hr>
+<img width="534" alt="image" src="https://user-images.githubusercontent.com/88880169/221355026-3b3a0fc0-d53b-474a-bf44-5380aa36728b.png">
+<img width="534" alt="image" src="https://user-images.githubusercontent.com/88880169/221355033-b63bf678-2f2f-4782-92ec-70e681fbe821.png">
+<img width="534" alt="image" src="https://user-images.githubusercontent.com/88880169/221355036-999f070d-285b-4bb9-9b88-7da4036a6588.png">
+
+```
+public class GenericArray2<T extends Comparable<T>> {
+    private T[] data;
+    int size=0;
+
+    public GenericArray2() {
+        data=(T[])new Comparable[50];
+    }
+    public GenericArray2(int n) {
+        data=(T[])new Comparable[n];
+    }
+    public void add(T element){
+        data[size]=element;
+        size++;
+    }
+    public int length(){
+        return size;
+    }
+    public String printGe(){
+        return Arrays.toString(data);
+    }
+    public boolean search(T element){
+        boolean found = false;
+        int j=0;
+        while(j<size&& !found){
+            if(data[j].compareTo(element)==0){
+                found=true;
+            }
+            j++;
+        }
+        return found;
+    }
+    public void bubbleSort(){
+        for(int i=0;i<size;i++){
+            for(int j=1;j<size-i;j++){
+                if(data[j-1].compareTo(data[j])>0){
+                    T temp=data[j-1];
+                    data[j-1]=data[j];
+                    data[j]=temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(data));
+    }
+    public void selectionSort(){
+        for(int i=0;i<size;i++){
+            int smallestIndex=i;
+            for(int j=i+1;j<size;j++){
+                if(data[j].compareTo(data[smallestIndex])<0){
+                    smallestIndex=j;
+                }
+            }
+            T temp=data[i];
+            data[i]=data[smallestIndex];
+            data[smallestIndex]=temp;
+        }
+        System.out.println(Arrays.toString(data));
+    }
+    public void insertionSort(){
+
+    }
+
+    public static void main(String[] args) {
+        GenericArray2<Integer> ge=new GenericArray2();
+        ge.add(3);
+        ge.add(561);
+        ge.add(4);
+        ge.add(34);
+        ge.add(39);
+        ge.add(56);
+        ge.add(6);
+        boolean search = ge.search(3);
+        String s = ge.printGe();
+        //System.out.println(s);
+        //System.out.println(search);
+        //ge.bubbleSort();
+        ge.selectionSort();
+    }
+}
+```
+Generic Programming – Iteration.   
+An iterator is an object that allows traversal over a given data structure.   
+<img width="534" alt="image" src="https://user-images.githubusercontent.com/88880169/221357158-bd1b0651-a89e-43e5-af8f-88c98dffe779.png">
+<img width="534" alt="image" src="https://user-images.githubusercontent.com/88880169/221357163-37d62a93-4ae5-484e-b936-ba9f6596d8eb.png">
+<img width="758" alt="image" src="https://user-images.githubusercontent.com/88880169/221357171-885ad0eb-d3ed-47c6-89af-1e4f974410ee.png">
+<img width="534" alt="image" src="https://user-images.githubusercontent.com/88880169/221357174-87df9122-bb0a-4bb3-87ea-7c0642e6a008.png">
+
+
+
+
 
 
 
