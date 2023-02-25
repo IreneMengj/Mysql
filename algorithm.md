@@ -1,6 +1,6 @@
 <b>Sorting Algorithms</b>
 
-- Bubble Sort.
+- <h3>Bubble Sort</h3>.
   - steps:   
     - Start from the beginning of the array;
     - Compare every adjacent pair, swap their position if they are in the wrong order (item on right smaller than the left).
@@ -16,7 +16,7 @@
   > <img width="393" alt="image" src="https://user-images.githubusercontent.com/88880169/221352462-7d5cc4be-5106-4521-9906-cfb17b60e959.png">
  <hr>
    
-- Selection Sort. 
+- <h3>Selection Sort</h3>. 
   - This is called selection sort because it works by repeatedly selecting the smallest item in the array.
   - steps:  
     - 1.First find the smallest item in the array and exchange it with the first entry.
@@ -43,7 +43,17 @@
      - Worst-case performance if data is sorted inversely, giving O(𝑛^2).
      - Inner loop never executes if data is sorted, giving O(n).
 
-Generic Programming. 
+-<h3>Merge Sort</h3>
+
+
+
+
+
+
+
+
+
+<h3>Generic Programming</h3>. 
 <hr>
 <img width="350" alt="image" src="https://user-images.githubusercontent.com/88880169/221354907-2ccceb9a-597c-49e7-9c37-1cd5f1f64207.png">
 <img width="534" alt="image" src="https://user-images.githubusercontent.com/88880169/221354911-daa7b7a6-ead7-4348-a64f-fab239c1723e.png">
@@ -134,12 +144,36 @@ public class GenericArray2<T extends Comparable<T>> {
     }
 }
 ```
-Generic Programming – Iteration.   
+<h3>Generic Programming – Iteration.</h3>  
 An iterator is an object that allows traversal over a given data structure.   
 <img width="534" alt="image" src="https://user-images.githubusercontent.com/88880169/221357158-bd1b0651-a89e-43e5-af8f-88c98dffe779.png">
 <img width="534" alt="image" src="https://user-images.githubusercontent.com/88880169/221357163-37d62a93-4ae5-484e-b936-ba9f6596d8eb.png">
 <img width="758" alt="image" src="https://user-images.githubusercontent.com/88880169/221357171-885ad0eb-d3ed-47c6-89af-1e4f974410ee.png">
 <img width="534" alt="image" src="https://user-images.githubusercontent.com/88880169/221357174-87df9122-bb0a-4bb3-87ea-7c0642e6a008.png">
+
+<h3>algorithmic design pattern</h3>.  
+divide-and-conquer: 
+1. Break problem up into smaller parts.
+2. Solve each part recursively.
+3. Combine solutions to sub-problems into overall solution.  
+
+<h3>Recursion</h3>
+This is the process in which a method calls itself continuously.
+- Recursion is defined by two properties:
+  - A base case
+  - A set of rules that reduces the chain of invocation to the base case.  
+  <hr>
+  <img width="248" alt="image" src="https://user-images.githubusercontent.com/88880169/221359008-e702fcee-51e0-4270-9b2d-8501f312848f.png">
+  <img width="828" alt="image" src="https://user-images.githubusercontent.com/88880169/221359024-50b78f51-ea9c-44f6-92d2-b28cbfc0773a.png">
+  <img width="475" alt="image" src="https://user-images.githubusercontent.com/88880169/221359522-6d740026-c60e-4144-b21b-0a5596f01d66.png">
+  <img width="837" alt="image" src="https://user-images.githubusercontent.com/88880169/221359540-d7112e04-3f77-400c-8a58-d11f2529465f.png">
+
+
+
+
+
+
+
 
 
 
