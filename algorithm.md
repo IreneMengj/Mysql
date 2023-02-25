@@ -45,15 +45,26 @@
 
 -<h3>Merge Sort</h3>
 
+> - Divide: If S has zero or one element, return S immediately; it is already sorted. Otherwise (S has at least two elements), remove all the elements from S and put them into two sequences, S1 and S2, each containing about half of the elements of S; that is, S1 contains the first ⌊n/2⌋ elements of S, and S2 contains the remaining ⌈n/2⌉ elements.
+> - Conquer: Recursively sort sequences S1 and S2.
+> - Combine: Put the elements back into S by merging the sorted sequences S1 and S2 into a sorted sequence
 
 
 
+<img width="475" alt="image" src="https://user-images.githubusercontent.com/88880169/221359670-19e2c7b3-272f-4956-88bf-f0fa11e5aa5b.png">
+<img width="475" alt="image" src="https://user-images.githubusercontent.com/88880169/221359703-185fa66e-0ef0-4e8a-a9a3-11fad164e8f5.png">
+<img width="475" alt="image" src="https://user-images.githubusercontent.com/88880169/221359707-c66a9b37-fd61-45f7-b707-ed45614afb5b.png">
+<img width="475" alt="image" src="https://user-images.githubusercontent.com/88880169/221359910-9f8f117f-4f23-4d43-87b7-4ef80a14043a.png">
+<img width="475" alt="image" src="https://user-images.githubusercontent.com/88880169/221359918-51b5daa0-b3b7-468f-a269-1de87ad3fdcf.png">
+<hr>
+
+- time complexity:  
+  - Always O(N*logN) because merge is O(N), and division is O(logN).
+  - Overhead of creating temp array and copying data.
+  - For large dataset Quicksort outperforms it.
 
 
-
-
-
-<h3>Generic Programming</h3>. 
+<h3>Generic Programming</h3>
 <hr>
 <img width="350" alt="image" src="https://user-images.githubusercontent.com/88880169/221354907-2ccceb9a-597c-49e7-9c37-1cd5f1f64207.png">
 <img width="534" alt="image" src="https://user-images.githubusercontent.com/88880169/221354911-daa7b7a6-ead7-4348-a64f-fab239c1723e.png">
