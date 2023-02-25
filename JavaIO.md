@@ -35,5 +35,12 @@ JAVA I/O
 
 <img width="510" alt="image" src="https://user-images.githubusercontent.com/88880169/221373873-640bfe99-e91e-458a-bbbb-123c742685c0.png">
 
+- CopyCharacter is very similar to CopyBytes example.
+
+- The difference is CopyCharacter uses FileReader and FileWriter for input and output in place of FileInputStream and FileOutputStream.
+
+- Notice that both CopyBytes and CopyCharacter use an int variable to read and write from.
+In CopyCharacter, the int holds a character value in its last 16 bits, in CopyBytes, the int variable holds a byte value in its last 8 bits. 
+
 
 
