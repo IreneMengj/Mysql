@@ -22,11 +22,29 @@
     - 1.First find the smallest item in the array and exchange it with the first entry.
     - 2.Find the next smallest item and exchange it with the second entry.
     - 3.Continue with this logic until the entire array is sorted
-<img width="807" alt="image" src="https://user-images.githubusercontent.com/88880169/221352829-575aba4c-2b21-4772-bab6-6b51152bb0e9.png">
-<img width="624" alt="image" src="https://user-images.githubusercontent.com/88880169/221352860-ef201440-17f4-467a-b644-aac33373110b.png">
-
-
+  <img width="807" alt="image" src="https://user-images.githubusercontent.com/88880169/221352829-575aba4c-2b21-4772-bab6-6b51152bb0e9.png">
+  <img width="624" alt="image" src="https://user-images.githubusercontent.com/88880169/221352860-ef201440-17f4-467a-b644-aac33373110b.png">
+  <hr>
+  - time complexity:  
+    - O(𝑛^2) because it involves a loop within a loop over a space of size n.  
+    - Selection sort is not impacted in any way by the state of the data.  
+    - Therefore, the worst case and the best-case performs both at O(𝑛^2).     
 - Insertion Sort. 
+  - The algorithm that is often used to sort a deck of cards. It considers then one at a time, inserting each into its proper place among those already considered (keeping them sorted).  
+  - steps:  
+    - Iterate from the first element to the last.  
+    - Compare the current element to its predecessor.  
+    - If the element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for        smaller elements.  
+   <img width="616" alt="image" src="https://user-images.githubusercontent.com/88880169/221353922-f669502b-c28b-4d81-a861-4668369e1204.png">
+   <img width="613" alt="image" src="https://user-images.githubusercontent.com/88880169/221353928-cf198bce-3716-4ec8-b62e-7c4c2275f4ec.png">
+    <hr>
+   - time complexity:  
+     - Unlike selection sort, the running time of insertion sort depends on the initial order of the items.
+     - Worst-case performance if data is sorted inversely, giving O(𝑛^2).
+     - Inner loop never executes if data is sorted, giving O(n).
+
+
+
 
 
 
