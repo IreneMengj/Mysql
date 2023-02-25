@@ -175,12 +175,33 @@ divide-and-conquer:
    - Memoization is where you (your program) memorize previously computed results, which can be used wherever the same result is needed. Like caching. 
    - We keep track of previously solved subproblems, and use lookups when needed. 
    - We can use this to prevent re-computing older computations. Hash maps and arrays can be used to hold onto computations such as these.  
+```
+import java.util.HashMap;
 
+public class FibonacciMemoization {
 
+    static HashMap<Integer, Integer> memo = new HashMap<Integer, Integer>();
 
+    public static int fib(int n) {
+        if (memo.containsKey(n)) {
+            return memo.get(n);
+        }
+        int result;
+        if (n <= 2) {
+            result = 1;
+        } else {
+            result = fib(n - 1) + fib(n - 2);
+        }
+        memo.put(n, result);
+        return result;
+    }
 
-
-
+    public static void main(String[] args) {
+        int n = 10;
+        System.out.println("The " + n + "th Fibonacci number is: " + fib(n));
+    }
+}
+```
 
 
 
@@ -227,6 +248,53 @@ public static int fibonacciIterative(int n){
   
 }
 ```
+You are required to write a function called Power(int x, int y) which returns the value of xy.
+- Write a recursive version of this function.
+- Write an iterative version of this function.
+
+```
+public static void main(String[] args) {
+        //System.out.println(powerRecursive(3,2));
+        System.out.println(powerIterative(2,4));
+    }
+    public static int powerRecursive(int x, int y){
+        if(y==0){
+            return 1;
+        }
+        return x*powerRecursive(x,y-1);
+    }
+
+    public static int powerIterative(int x, int y){
+        int temp=x;
+        while(y>1){
+            x=x*temp;
+            y--;
+        }
+        return x;
+    }
+```
+Write a recursive function that detects if a string is a palindrome (a palindrome is a word that can be read the same way backward and forward, e.g. racecar, navan, abba). 
+```
+public static boolean isPalindrome(String str) {
+    if (str.length() <= 1) {
+        return true; // base case: empty string or single character string is always a palindrome
+    } else {
+        char firstChar = str.charAt(0);
+        char lastChar = str.charAt(str.length() - 1);
+        if (firstChar != lastChar) {
+            return false; // if first and last characters don't match, it's not a palindrome
+        } else {
+            String remaining = str.substring(1, str.length() - 1); // remove first and last characters
+            return isPalindrome(remaining); // check if remaining string is a palindrome
+        }
+    }
+}
+```
+
+Write a recursive function that prints all the values from a linked list.
+
+
+
 
 
 
