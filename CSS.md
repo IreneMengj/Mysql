@@ -28,3 +28,22 @@ selector{
         - Class selector takes precedence over element selector.        
   
     - Expand the selector https://www.runoob.com/cssref/css-selectors.html
+
+- attribute
+  - 1. Font and text
+     - Font-size: indicates the font size
+     - color: Well, it's the color.
+     - text-align: indicates the alignment mode
+     - Line-height: indicates the line height
+  - 2. background
+  ```
+  background: url("img/logo.jpg") no-repeat center;
+  ```
+  - 3. border
+  - 4. width and height
+  - 5. box model
+    - padding: By default, the padding affects the size of the entire box
+      - box-sizing:border-box(Set the properties of the box so that width and height are the final box size）
+    - margin:
+    - float
+    
