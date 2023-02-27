@@ -69,3 +69,8 @@ Nodes & Links<br>
 This is called sequential access.
 <li>Sequential access takes a lot longer than random access to get to nodes near the end of a long list.
 </ul>
+<b>Doubly Linked List</b>
+<li>Singly-linked lists allow one way traversal: one can move from a node to its successor.
+<li>Limitation: one cannot easily move from a node to its predecessor. Doubly-linked lists allow easy transitions in both directions.
+<li>A node for a doubly linked list must have both a successor link and a predecessor link. 
+  
