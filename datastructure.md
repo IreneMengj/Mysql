@@ -11,4 +11,14 @@
 
 <p>ArrayList is implemented using an array as a private instance variable. When this hidden array is full, a new larger hidden array is created and the data is transferred to this new array. In this way an ArrayList abstracts the user from the low-level workings of an Array.</p>
 
-
+<h3>Arrays versus ArrayList</h3>
+<h4>Why use an Array?</h4>
+<ol>
+  <li>An ArrayList is less efficient than an array</li>
+  <ul>
+      <li>An ArrayList is less efficient than an array in some cases because an ArrayList is implemented as a dynamic array, which means it can grow and shrink as needed. When you add an element to an ArrayList, it may have to resize the underlying array and copy all the existing elements to a new, larger array. This can be expensive in terms of time and memory usage.
+      <li>Another factor that can make an ArrayList less efficient than an array is that an ArrayList is an object, which means it has additional overhead compared to a simple array. Accessing an element in an ArrayList requires an additional level of indirection through a method call, while accessing an element in an array is a direct memory access.
+  </ul>        
+  <li>ArrayList does not have the convenient square bracket notation</li>
+<li>The base type of an ArrayList must be a class type (or other reference type). It cannot be a primitive type. (Although wrappers, auto boxing, and auto unboxing make this a non-issue with Java 5)</li>
+  </ol>
