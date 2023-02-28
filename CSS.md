@@ -44,6 +44,6 @@ selector{
   - 5. box model
     - padding: By default, the padding affects the size of the entire box
       - box-sizing:border-box(Set the properties of the box so that width and height are the final box size）
-    - margin:
+    - margin: auto(center horizontally）
     - float
     
