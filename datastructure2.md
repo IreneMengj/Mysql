@@ -151,3 +151,14 @@ This makes the queue a First-In-First-Out (FIFO) data structure. In a FIFO data 
 element added to the queue will be the first one to be removed.    
 Often a peek operation is also supported, returning the value of the front element without
 dequeuing it.     
+![image](https://user-images.githubusercontent.com/88880169/222913696-08aeb480-1416-4b8b-8508-f35cc00e3b18.png)
+![image](https://user-images.githubusercontent.com/88880169/222913729-edf98d79-bcf7-4c07-892f-3e1e84addaef.png)
+- enqueue: adds an element at the end.   
+- dequeue: removes an element from the queue.  
+- peak: method to return the first element at the top of the queue…without removing it.   
+- EmptyQueueException: this custom error extends from RuntimeException and when called simply passes the string above, which is printed.You
+should save this in a file called “EmptyQueueException.java” in the same folder that you are creating your Linked List Queue.  
+
+
+
+
