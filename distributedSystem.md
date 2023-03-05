@@ -46,4 +46,5 @@ In essence, it sits in the middle of the system.
   - Transaction processing monitors;
   - Data converters;
   - Communication controllers.
+![image](https://user-images.githubusercontent.com/88880169/222974366-b39878a2-6667-404f-82da-2f17fdbb1c56.png)
 
