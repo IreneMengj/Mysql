@@ -48,3 +48,7 @@ In essence, it sits in the middle of the system.
   - Communication controllers.
 ![image](https://user-images.githubusercontent.com/88880169/222974366-b39878a2-6667-404f-82da-2f17fdbb1c56.png)
 
+#### Remote Procedure Call
+- Definition: A remote procedure call (RPC) provides a means of invoking functions on other machines to which the caller is connected over a network.
+This paradigm abstracts the low level details of network communication such that the function call appears like a local call.  
+![image](https://user-images.githubusercontent.com/88880169/222974516-0ac56646-14c4-4226-b5ab-54900de994d1.png)
