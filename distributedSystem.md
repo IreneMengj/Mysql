@@ -38,5 +38,12 @@ Unpredictable responses depending on the system organisation and network load.
 
 ![image](https://user-images.githubusercontent.com/88880169/222974231-9214991f-e39b-4990-a922-5777e08a76cd.png)
 
-
+##### Middleware
+- Software that manages and supports the different components of a distributed system.
+In essence, it sits in the middle of the system.
+- is usually off-the-shelf rather than specially written software. 
+- Examples
+  - Transaction processing monitors;
+  - Data converters;
+  - Communication controllers.
 
