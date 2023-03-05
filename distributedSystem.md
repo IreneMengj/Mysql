@@ -18,5 +18,20 @@ Concurrent processing to enhance performance.
 - Scalability  
 Increased throughput by adding new resources.  
 - Fault tolerance  
-The ability to continue in operation after a fault has
-occurred.
+The ability to continue in operation after a fault has occurred.
+- Complexity
+Typically, distributed systems are more complex than
+centralised systems.
+- Security
+More susceptible to external attack.
+- Manageability
+More effort required for system management.
+- Unpredictability
+Unpredictable responses depending on the system organisation and network load.
+###### Distributed System Characteristics
+- Multiple autonomous components
+- Components are not shared by all users
+- Resources may not be accessible
+- Software runs in concurrent processes on different processors
+- Multiple points of control
+- Multiple points of failure
