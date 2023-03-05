@@ -35,3 +35,8 @@ Unpredictable responses depending on the system organisation and network load.
 - Software runs in concurrent processes on different processors
 - Multiple points of control
 - Multiple points of failure
+
+![image](https://user-images.githubusercontent.com/88880169/222974231-9214991f-e39b-4990-a922-5777e08a76cd.png)
+
+
+
