@@ -75,11 +75,60 @@ for(var i=0;i<ps.length;i++){
   1. Import jackson jar packages
   2. Create the core jackson object objectmapper
   3. Invoke the related methods of the objectmapper for conversion
+  4. @JsonIgnore || @JsonFormat(pattern="yyyy-MM-dd")
 ```
 @Test
     public void test1() throws Exception {
        //create person object
        Person p = new Person("irene",40);
+       //create jackson core object,ObjectMapper
+        ObjectMapper mapper=new ObjectMapper();
+        //conversion: convert object to string
+        String s = mapper.writeValueAsString(p);
+        System.out.println(s);
+    }
+```
+```
+public class Person {
+    String name;
+    int age;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    Date birthday;
+
+    public Person(String name, int age,Date birthday) {
+        this.name = name;
+        this.age = age;
+        this.birthday=birthday;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+}
+@Test
+    public void test1() throws Exception {
+       //create person object
+       Person p = new Person("irene",40,new Date());
        //create jackson core object,ObjectMapper
         ObjectMapper mapper=new ObjectMapper();
         //conversion: convert object to string
