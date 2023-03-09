@@ -26,3 +26,11 @@
         }
     </script>
     ```
+```
+$.get("ajaxServlet",{"username":"jack"},function () {
+      alert("404 not found");
+            },"text");
+$.post("ajaxServlet",{"username":"jack"},function () {
+       alert("404 not found");
+       },"text");
+```            
