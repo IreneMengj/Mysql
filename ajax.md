@@ -69,3 +69,9 @@ for(var i=0;i<ps.length;i++){
    }
 }
 ```      
+- JSON data and JAVA objects are converted to each other   
+- jackson(The built-in parser for springmvc)
+- Convert JAVA objects to JSON
+  1. Import jackson jar packages
+  2. Create the core jackson object objectmapper
+  3. Invoke the related methods of the objectmapper for conversion
