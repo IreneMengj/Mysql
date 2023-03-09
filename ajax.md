@@ -34,3 +34,13 @@ $.post("ajaxServlet",{"username":"jack"},function () {
        alert("404 not found");
        },"text");
 ```            
+### JSON JavaScript object notation.  
+- JSON is a syntax for storing and exchanging text information, similar to XML
+- JSON is smaller, faster, and easier to parse than XML
+```
+var person={"name":"zhangsan","age":32};
+      var persons={"persons":[{"name":"zhangs"},{"name":"Dsada"},{"name":"fadsgaf"}]};
+      //alert(persons)
+      var ps=[{"name":"zhangs"},{"name":"Dsada"},{"name":"fadsgaf"}];
+```
+
