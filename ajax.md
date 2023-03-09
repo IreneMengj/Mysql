@@ -75,3 +75,15 @@ for(var i=0;i<ps.length;i++){
   1. Import jackson jar packages
   2. Create the core jackson object objectmapper
   3. Invoke the related methods of the objectmapper for conversion
+```
+@Test
+    public void test1() throws Exception {
+       //create person object
+       Person p = new Person("irene",40);
+       //create jackson core object,ObjectMapper
+        ObjectMapper mapper=new ObjectMapper();
+        //conversion: convert object to string
+        String s = mapper.writeValueAsString(p);
+        System.out.println(s);
+    }
+```
