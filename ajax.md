@@ -43,4 +43,29 @@ var person={"name":"zhangsan","age":32};
       //alert(persons)
       var ps=[{"name":"zhangs"},{"name":"Dsada"},{"name":"fadsgaf"}];
 ```
-
+```
+ <script>
+      var person={"name":"zhangsan","age":32};
+      var name=person.name;
+      alert(name);
+      var persons={"persons":[{"name":"zhangs"},{"name":"Dsada"},{"name":"fadsgaf"}]};
+      var name1=persons.persons[2].name;
+      alert(name1);
+      //alert(persons)
+      var ps=[{"name":"zhangs"},{"name":"Dsada"},{"name":"fadsgaf"}];
+      var name2=ps[1].name;
+      alert(name2);
+      alert(ps);
+    </script>
+```
+```
+for(var key in person){
+   alert(key+":"+person[key]);
+}
+for(var i=0;i<ps.length;i++){
+     var person=ps[i];
+     for(var key in person){
+     alert(key+":"+person[key]);
+   }
+}
+```      
