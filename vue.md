@@ -116,3 +116,38 @@
         })
     </script>
 ```    
+### calculator. 
+```
+<div class="inputnum">
+        <button @click="subtraction">-</button>
+        <span>{{number}}</span>
+        <button @click="addition">+</button>
+    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app= new Vue({
+            el:".inputnum",
+            data:{
+                number:0
+            },
+            methods: {
+                subtraction:function(){
+                    if(this.number==0){
+                        alert("number can't be less than 0");
+                    }else{
+                        this.number-=1;
+                    }
+                   
+                },
+                addition:function(){
+                    if(this.number==9){
+                        alert("number can't be over 10");
+                    }else{
+                        this.number+=1;
+                    }
+                }
+            }
+        })
+    </script>
+```
