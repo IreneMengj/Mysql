@@ -164,7 +164,7 @@
             data:{
                 isShow:ture
             },
-            method:{
+            methods:{
                 changeIsShow:function(){
                     this.isShow = !this.isShow;
                 }
@@ -172,3 +172,28 @@
 
         })
 ```
+### v-if   
+```
+ <div id="app">
+        <p v-if="true">heihei</p>
+        <input type="button" value="clickme" @click="change"></input>
+        <p v-if="isShow" >haha</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app= new Vue({
+            el:"#app",
+            data:{
+                isShow:true
+            },
+            methods:{
+                change:function(){
+                    
+                    this.isShow= !this.isShow
+                    
+                }
+            }
+
+        })
+    </script>
+```    
