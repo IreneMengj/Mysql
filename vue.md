@@ -91,3 +91,28 @@
         })
     </script>
 ```    
+```
+   <div id="app" class="app1">
+        <input type="button" value="binding events" @click="doIT">
+        <input type="button" value="double click" @dblclick="doIT">
+        <h2 @click="changeFood">{{food}}</h2>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app= new Vue({
+            // el:"#app",
+            el:".app1",
+            data:{
+                food:"tomato eggs"
+            },
+            methods: {
+                doIT:function(){
+                    alert("haha")
+                },
+                changeFood:function(){
+                    this.food+=" so delicious!!!"
+                }
+            }
+        })
+    </script>
+```    
