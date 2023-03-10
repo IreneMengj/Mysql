@@ -151,3 +151,24 @@
         })
     </script>
 ```
+### v-show
+```
+<div id="app">
+        <input type="button" value="click me" @click="changeIsShow">
+        <img v-show="isShow" src="/Users/mengjiayu/Desktop/1.jpeg" alt="">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app= new Vue({
+            el:"#app",
+            data:{
+                isShow:ture
+            },
+            method:{
+                changeIsShow:function(){
+                    this.isShow = !this.isShow;
+                }
+            },
+
+        })
+```
