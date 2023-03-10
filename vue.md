@@ -33,3 +33,24 @@
 </body>   
 </html>
 ```
+### v-text.  
+```
+<body>
+    <div id="app" class="app1">
+        <h2>shenzhen{{message+"!"}}</h2>
+        <h2 v-text="message"></h2>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app= new Vue({
+            // el:"#app",
+            el:".app1",
+            data:{
+                message:"hello",
+                
+            }
+        })
+    </script>
+</body>   
+```
