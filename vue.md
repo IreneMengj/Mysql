@@ -116,6 +116,25 @@
     </script>
 ```    
 ```
+ <div id="app">
+       <input type="button" value="click" @click="doIt('dsa',234)">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app= new Vue({
+            el:"#app",
+            data:{
+              
+            },
+            methods:{
+               doIt:function(p1,p2){
+                    console.log(p1);
+                    alert(p2);
+               }
+            }
+        })
+```        
+```
    <div id="app" class="app1">
         <input type="button" value="binding events" @click="doIT">
         <input type="button" value="double click" @dblclick="doIT">
