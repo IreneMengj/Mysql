@@ -273,3 +273,28 @@
         })
     </script>
 ```    
+### v-model. 
+```
+<div id="app">
+        <input type="button" value="click" @click="setM">
+       <input type="text" v-model="message" @keyup.enter="heihei">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app= new Vue({
+            el:"#app",
+            data:{
+              message:"haha"
+            },
+            methods:{
+
+              heihei:function(){
+                alert(this.message)
+              },
+              setM:function(){
+                this.message="das";
+              }
+            }
+        })
+    </script>
+```    
