@@ -33,6 +33,30 @@
 </body>   
 </html>
 ```
+### v-bind.  
+```
+<div id="app">
+        <img v-bind:src="imgSrc" alt="">
+        <img :src="imgSrc" alt="" :title="imgTitle+'!!!'" :class="{active:isActive}" @click="togleActive">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app= new Vue({
+            el:"#app",
+            data:{
+               imgSrc:"http://www.itheima.com/images/logo.png",
+               imgTitle:"heima programer",
+               isActive:false
+            },
+            methods:{
+                togleActive:function(){
+                    this.isActive= !this.isActive
+                }
+            }
+
+        })
+    </script>
+```    
 ### v-text.  
 ```
 <body>
