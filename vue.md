@@ -73,3 +73,21 @@
     </script>
 </body>   
 ```
+### v-on. 
+```
+<div id="app" class="app1">
+        <input type="button" value="binding events" @click="doIT">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app= new Vue({
+            // el:"#app",
+            el:".app1",
+            methods: {
+                doIT:function(){
+                    alert("haha")
+                }
+            }
+        })
+    </script>
+```    
