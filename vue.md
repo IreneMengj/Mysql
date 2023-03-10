@@ -54,3 +54,22 @@
     </script>
 </body>   
 ```
+### v-html
+```
+<body>
+    <div id="app" class="app1">
+        <p v-html="content"></p>
+        <p v-text="content"></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app= new Vue({
+            // el:"#app",
+            el:".app1",
+            data:{
+                content:"<a href='http://www.baidu.com'>heima</a>",
+            }
+        })
+    </script>
+</body>   
+```
