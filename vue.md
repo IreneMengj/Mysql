@@ -221,3 +221,36 @@
         })
     </script>
 ```    
+### v-for. 
+```
+ <div id="app">
+       <input type="button" value="add" @click="add">
+       <input type="button" value="remove" @click="remove">
+       <ul>
+        <li v-for="(item,index) in arr">
+            {{index+1}}{{item}}
+        </li>
+        <h2 v-for="item in veg">{{item.name}}</h2>
+       </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app= new Vue({
+            el:"#app",
+            data:{
+               arr:["beijing","shanghai","guangzhou"],
+               veg:[{"name":"haha"},{"name":"dasf"}]
+            },
+            methods:{
+                add:function(){
+                    this.veg.push({"name":"fds"})
+                },
+                remove:function(){
+                    this.veg.shift();
+
+                }
+            }
+
+        })
+    </script>
+```    
