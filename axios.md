@@ -19,3 +19,29 @@
        }
     </script>
 ```
+```
+<div id="app">
+    <input type="button" value="get joke" @click="getJoke">
+    <p>{{joke}}</p>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+       var app = new Vue({
+        el:"#app",
+        data:{
+          joke:"Very funny joke"
+        },
+        methods:{
+          getJoke:function(){
+            var that=this;
+            axios.get("https://autumnfish.cn/api/joke").then(function(response){
+               that.joke=response.data; 
+            },function(err){
+
+            })
+          }
+        }
+       })
+    </script>
+```
