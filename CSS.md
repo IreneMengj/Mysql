@@ -1,5 +1,13 @@
 CSS  Cascading Style Sheets
 ---
+! important   
+1. If you want to style a tag, css must be specific to a  
+2. To center the image within a piece of text, attach the p tag to the img tag and set the text-align attribute to the p tag  
+3. Pseudo-class selectors must be in the order of: link, : visitied, : hover   
+
+![image](https://user-images.githubusercontent.com/88880169/225583764-f8620ff0-e443-450c-965b-32367b2d0e6d.png)
+
+---    
 - definition：
 Multiple styles can be applied to the same HTML element at the same time  
 - benefits：
