@@ -6,6 +6,8 @@ CSS  Cascading Style Sheets
 3. Pseudo-class selectors must be in the order of: link, : visitied, : hover   
 
 ![image](https://user-images.githubusercontent.com/88880169/225583764-f8620ff0-e443-450c-965b-32367b2d0e6d.png)
+![image](https://user-images.githubusercontent.com/88880169/225962525-50e588c3-abea-4e4b-9ea2-f32a197f642b.png)
+
 
 ---    
 - definition：
